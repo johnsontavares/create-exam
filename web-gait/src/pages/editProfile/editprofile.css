@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+.errors{
+  color: #FF0F0F;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+}
+
+.title{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+  color: #0b1569;
+  text-align: center;
+}
+.subtitle{
+  color: #2e2e2e;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+.logo2 {
+ 
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 120px;
+  height: 100px;
+  cursor: pointer;
+  cursor: hand;
+  background-repeat: no-repeat;
+}
+
+.transition, form .question label, form .question input[type="text"] {
+  -moz-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  -o-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  -webkit-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+}
+
+* {
+  font-family: Helvetica, sans-serif;
+  font-weight: light;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: url(https://i.imgur.com/RRoOZtk.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+form {
+  position: relative;
+  display: inline-block;
+  width: 600px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 40px;
+  margin: 160px 0;
+  left: 45%;
+  padding: 20px;
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+form .question {
+  position: relative;
+  /*padding: 10px 0;*/
+}
+form .question:first-of-type {
+  padding-top: 0;
+}
+form .question:last-of-type {
+  padding-bottom: 0;
+}
+form .question label {
+  transform-origin: left center;
+  color:  #1AE5BE;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  display: block;
+  position: absolute;
+  margin-top: -40px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+form .question input[type="text"] {
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid  #1AE5BE;
+  line-height: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  border-radius: 60px;
+  color: #262626;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}
+form .question input[type="text"]:focus {
+  outline: none;
+  background: #1AE5BE;
+  color: white;
+  margin-top: 30px;
+}
+form .question input[type="text"]:valid {
+  margin-top: 30px;
+}
+
+
+
+
+form .question input[type="password"] {
+  appearance: none;
+  background-color: none;
+  border: 1px solid  #1AE5BE;
+  line-height: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  border-radius: 60px;
+  color: #2b2b2b;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}
+form .question input[type="password"]:focus {
+  outline: none;
+  background: #1AE5BE;
+  color: white;
+  margin-top: 30px;
+}
+form .question input[type="password"]:valid {
+  margin-top: 30px;
+}
+
+
+.divCenter {
+  position: relative;
+  background-color:transparent;
+  text-align: left;
+  width: 80%;
+  margin-left: 15%;
+}

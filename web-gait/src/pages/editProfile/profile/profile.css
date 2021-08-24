@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+.icon {
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  cursor: hand;
+  background-image:url(https://i.imgur.com/tDvwyyA.png);
+  background-repeat: no-repeat;
+}
+
+.left{
+  text-align: left;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300px;
+  margin-left: 5px;
+  font-size: 16px;
+
+}
+
+.right{
+  text-align: right;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300px;
+  font-size: 16px;
+  margin-left: 350px;
+}
+
+.logo {
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 100px;
+    height: 100px;
+    cursor: hand;
+    background-image:url(https://i.imgur.com/tDvwyyA.png);
+    background-repeat: no-repeat;
+  }
+.transition, form .question label, form .question input[type="text"] {
+    -moz-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+    -o-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+    -webkit-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+    transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  }
+  
+  * {
+    font-family: Helvetica, sans-serif;
+    font-weight: light;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  form {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    box-sizing: border-box;
+    padding: auto;
+    background-color: white;
+    border-radius: 40px;
+
+  }
+
+  .title{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: #0b1569;
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+  
+  form .question {
+    position: relative;
+    padding: auto;
+    box-sizing: border-box;
+  }
+  form .question:first-of-type {
+    padding-top: 0;
+  }
+  form .question:last-of-type {
+    padding-bottom: 0;
+  }
+  th {
+    color:  #1AE5BE;
+    font-weight: 100;
+    width: 100px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+    margin-top: -40px;
+    pointer-events: none;
+  }
+  
+  td {
+    color:  #383838;
+    font-weight: 100;
+    width: 100px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+    margin-top: -40px;
+    text-align: center;
+    padding-right: 10px;
+    pointer-events: none;
+  }
+  form .question input[type="text"] {
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid  #1AE5BE;
+    line-height: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-radius: 60px;
+    color: #262626;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    position: relative;
+    z-index: 1;
+  }
+  form .question input[type="text"]:focus {
+    outline: none;
+    background: #1AE5BE;
+    color: white;
+    margin-top: 30px;
+  }
+  form .question input[type="text"]:valid {
+    margin-top: 30px;
+  }
+  form .question input[type="text"]:focus ~ label {
+    -moz-transform: translate(0, -35px);
+    -ms-transform: translate(0, -35px);
+    -webkit-transform: translate(0, -35px);
+    transform: translate(0, -35px);
+  }
+  form .question input[type="text"]:valid ~ label {
+    font-size:24px;
+    -moz-transform: translate(5px, -35px) scale(0.6);
+    -ms-transform: translate(5px, -35px) scale(0.6);
+    -webkit-transform: translate(5px, -35px) scale(0.6);
+    transform: translate(5px, -35px) scale(0.6);
+  }
+  
+  
+  form .question input[type="password"] {
+    appearance: none;
+    background-color: none;
+    border: 1px solid  #1AE5BE;
+    line-height: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-radius: 60px;
+    color: #2b2b2b;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    position: relative;
+    z-index: 1;
+  }
+  form .question input[type="password"]:focus {
+    outline: none;
+    background: #1AE5BE;
+    color: white;
+    margin-top: 30px;
+  }
+  form .question input[type="password"]:valid {
+    margin-top: 30px;
+  }
+  form .question input[type="password"]:focus ~ label {
+    -moz-transform: translate(0, -35px);
+    -ms-transform: translate(0, -35px);
+    -webkit-transform: translate(0, -35px);
+    transform: translate(0, -35px);
+  }
+  form .question input[type="password"]:valid ~ label {
+    font-size: 24px;
+    -moz-transform: translate(5px, -35px) scale(0.6);
+    -ms-transform: translate(5px, -35px) scale(0.6);
+    -webkit-transform: translate(5px, -35px) scale(0.6);
+    transform: translate(5px, -35px) scale(0.6);
+  }
