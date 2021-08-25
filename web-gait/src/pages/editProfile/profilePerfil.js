@@ -53,7 +53,6 @@ try {
   alert(data.message);
 }
 
-
 async function handleSubmit(e){
     e.preventDefault();
     const data = {
@@ -69,7 +68,6 @@ async function handleSubmit(e){
     }
     
 }
-
 try {
     if(specialization!==''&&phone!==''){
         const response = await Api.put(`updateUser/${idUsuario}`,data, config);
@@ -158,7 +156,7 @@ try {
                     <br></br>
                     
                     <div className={"question"}>
-                         <InputMask mask="(99) 99999-9999" placeholder="phone" id="phone" name="phone" type="text" required
+                         <InputMask mask="(99)99999-9999" placeholder="phone" id="phone" name="phone" type="text" required
                            
                            
                            onChange={e => setPhone(e.target.value.replace(/-/g,"").replace("(","").replace(")","") )}
@@ -170,7 +168,7 @@ try {
                         </div>
                         <br></br>
                         <div className={"question"}>
-                         <InputMask mask="(99) 99999-9999"  placeholder="phone2" id="phone2" name="phone2" type="text" required
+                         <InputMask mask="(99)99999-9999"  placeholder="phone2" id="phone2" name="phone2" type="text" required
                             onChange={e => setPhone2(e.target.value.replace(/-/g,"").replace("(","").replace(")","") )}
                           
                             value = {phone2}

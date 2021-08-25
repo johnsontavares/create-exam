@@ -1,50 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-
-.logo {
+/* --------------------------------- imagem --------------------------------- */
+.logo-login img{
+  position: relative;
+  width: 800px;
+  height: 639px;
   float: left;
-  margin-top: 30px;
-  margin-left: 30px;
-  width: 120px;
-  height: 120px;
-  cursor: pointer;
-  cursor: hand;
-  background-image:url(https://i.imgur.com/tDvwyyA.png);
-  background-repeat: no-repeat;
 }
-
-.forg{
-font-family: 'Quicksand', sans-serif;
-font-size: 17px;
-font-weight: 400;
-color:rgb(37, 29, 80);
-text-align: left;
-margin-left: 5px;
-
-}
-
-.reg{
-font-family: 'Quicksand', sans-serif;
-font-size: 17px;
-font-weight: 400;
-color:rgb(37, 29, 80);
-text-align: right;
-margin-left: 450px;
-}
+/* ----------------------------------- -- ----------------------------------- */
   
 .errors{
   color: #FF0F0F;
   font-family: 'Quicksand', sans-serif;
   font-weight: 500;
+
+}
+/* --------------------------------- titulo --------------------------------- */
+.titulo-login{
+  position: relative;
 }
 
-.title{
-  font-family: 'Quicksand', sans-serif;
-  font-size: 45px;
-  font-weight: 600;
-  color: #0b1569;
-  text-align: center;
+.titulo-login h1{
+  font-size: 100px;
+  margin: 0px 0px 10px 0px;
 }
+
+.titulo-login h2{
+  color: #326ABE;
+  margin: 0px 0px 10px 0px;
+}
+
+/* ------------------------------- fim titulo ------------------------------- */
+
+
+/* --------------------------------- inputs --------------------------------- */
+
+form .question {
+  width: 500px;
+  height: 54px;
+  
+  position: relative;
+  padding: 10px 0;
+}
+
+/* -------------------------------- fim input ------------------------------- */
+
+/* --------------------------------- button --------------------------------- */
+
+.direita{
+  width: 400px;
+  height: 73px;
+  position: relative;
+  text-align: center;
+  margin: 0px 0px 0px 0px;
+  right: 350px;
+}
+
+/* ------------------------------- fim button ------------------------------- */
+
+
+/* -------------------------------- checkbox -------------------------------- */
+.checkbox-remenber{
+  position:relative;
+ 
+
+}
+/* ----------------------------------- fim ---------------------------------- */
+
+
+
+/* ----------------------------- forgot password ---------------------------- */
+.forg{
+
+  position: relative;
+font-family: 'Quicksand', sans-serif;
+font-size: 17px;
+font-weight: 400;
+color:#6082F6;
+left: 80px;
+
+
+
+}
+/* ----------------------------------- fim ---------------------------------- */
+
+/* --------------------------------- sing up -------------------------------- */
+.reg{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color:#6082F6;
+  text-align: right;
+  position:relative;
+  left: 200px;
+ 
+
+  }
+/* ------------------------------- fim sing up ------------------------------ */
 
 .login-page {
 width: 360px;
@@ -65,29 +117,18 @@ margin: auto;
   -webkit-font-smoothing: antialiased;
 }
 
-.direita{
-
-  text-align: center;
-}  
+  
 form {
-  position: relative;
-  width: 600px;
   box-sizing: border-box;
   padding: 30px 25px;
   background-color: white;
   border-radius: 40px;
-  margin: 40px auto;
-  left: 30%;
   -moz-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
 }
 
-form .question {
-  position: relative;
-  padding: 10px 0;
-}
 form .question:first-of-type {
   padding-top: 0;
 }

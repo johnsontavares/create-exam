@@ -61,13 +61,11 @@ export default class Profile extends Component{
                         </tr>
                     </table>
                     <br></br>
-                    
                         <Link to ={`/profilePerfil/${this.state.userDoctor.id}`}><Button
                         fullWidth
                         variant="contained"
                         color="primary"
                         >TO EDIT</Button></Link>
-
                         <br></br>
                         <br></br>
                         
@@ -76,7 +74,6 @@ export default class Profile extends Component{
                         variant="contained"
                         color="primary"
                         >INACTIVATE PROFILE</Button></Link>
-                        
                 </form>
                 </div>      
             )

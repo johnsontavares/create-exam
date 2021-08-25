@@ -10,8 +10,5 @@ routes.post('/createExam', Create_Exam_Controller.create_Exam);
 routes.get('/getAllStatus/', Create_Exam_Controller.getAllStatus);
 routes.get('/findExamId/:id', FindExamController.findExambyId);
 routes.get('/allExamesCreate/', FindAllExamsCreateController.getAllExam);
-
-routes.get('/createExam/:name', Create_Exam_Controller.getExamData)
-routes.put("/updateExam/:id", Create_Exam_Controller.updateExam)
-
+routes.post('/getExamIdName/',FindAllExamsCreateController.getNameExam); 
 export default routes;

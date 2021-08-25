@@ -1,13 +1,12 @@
 import React, { useEffect, useState, ChangeEvent, FormEvent, FocusEvent } from 'react'
 import './styles.css'
-
 import Sidebar from '../../components/sidebar/Sidebar';
 
 import { Link, useHistory } from 'react-router-dom'
 // import { FiArrowLeft } from 'react-icons/fi'
 import api from '../../services/api';
 import InputMask from 'react-input-mask';
-import {useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 // import  UserRepository  from '../../../..//Back-end/src/repositorie/useRepositorie'
 
 const CreatePoint = () => {
@@ -16,9 +15,10 @@ const CreatePoint = () => {
 
     const [formData, setFormData] = useState({
 
+        name: '',
         examDate: '',
         examDuration: '',
-        examDescription: '', 
+        examDescription: ''
 
     })
 
@@ -27,7 +27,7 @@ const CreatePoint = () => {
     const [selectedItems, setSelectedItems] = useState<number[]>([])
     const [CPF, setCpf] = useState('');
     const [name, setName] = useState('')
-    const [birthDate,setBirthDate] = useState('')
+    const [BirthDate, setBirthDate] = useState('')
     const [email, setEmail] = useState('')
     const [Phone1, setPhone1] = useState('')
     const [Phone2, setPhone2] = useState('')
@@ -38,7 +38,7 @@ const CreatePoint = () => {
 
     const history = useHistory()
 
-     function handleInputChange(event: ChangeEvent<HTMLInputElement>) {
+    function handleInputChange(event: ChangeEvent<HTMLInputElement>) {
         const { name, value } = event.target
 
         setFormData({ ...formData, [name]: value })
@@ -46,117 +46,100 @@ const CreatePoint = () => {
 
     const cpfonBlur = (e: FocusEvent<HTMLInputElement>) => {
         const cpfData = e.target.value
-        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>",cpfData)
-
-        try {
-            fetch(`http://localhost:8081/new-user/${cpfData}`)
-        
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>", cpfData)
+        fetch(`https://server-gait.herokuapp.com/new-user${cpfData}`)
             .then(data => data.json())
             .then(data => {
                 console.log(data.name)
-                
-                setBirthDate(data.birth_date)
                 setName(data.name)
+                setBirthDate(data.birth_date)
+                // Phone1
                 setPhone1(data.phone1)
                 setPhone2(data.phone2)
                 setGender(data.gender)
                 setWeight(data.weight)
                 setHeight(data.height)
-                setEmail(data.email)
-    
-            })
-        } catch (error) {
-            const { data } = error.response;
-            alert(data.message);
-        }
 
+
+
+
+            })
     }
 
     async function handleSubmit(event: FormEvent) {
         event.preventDefault()
 
-        const { 
-                examDate,
-                examDuration,
-                examDescription,
-             } = formData;
+        const { name,
+            examDate,
+            examDuration,
+            examDescription } = formData;
 
 
         const data = {
             name,
             examDate,
             examDuration,
-            examDescription,
-            CPF,
-            Phone1,
-            Phone2,
-            birthDate,
-            Gender,
-            Weight,
-            Height,
-            email
-
+            examDescription
         }
 
         console.log(data);
 
-        try {
-            await api.post("/users", data)
-            
+
+        await api.post("/users", data)
             .then(response => {
-
                 console.log(response);
-                if(response.status == 200){
-                    alert(" Exam Created")
-                    history.push('/home')
-
-                }
-                
             })
-            // .catch(error => {
-            //     console.log(error);
-            // });
+            .catch(error => {
+                console.log(error);
+            });
+        history.push('/create-point')
 
-        } catch (error) {
-
-            const { data } = error.response;
-            alert(data.message);
-        }
-
-
-        
-        
-        // alert("Exam Created")
+        alert("Exam Created")
 
     }
 
     const idUser = useParams()
-    let optimisedHandleChange = handleInputChange
-
 
     return (
-        
+
         <div id="page-create-point">
             <Sidebar />
+
+            <div className="pesquisa-exame">
+                <img src="https://i.imgur.com/WMqNzEw.png" alt="Buscar..." />
+                <input type="text" id="txtBusca" placeholder="Search..." />
+
+            </div>
+
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="85" fill="currentColor"
+                className="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0
+                 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+            </svg>
+
             <form onSubmit={handleSubmit}>
-                <h1> Examinations</h1><br /> 
+                <h1> Examinations</h1><br />
                 <p>Please, fill in all the informations</p> <br /> <br />
                 <p>Obligatory *</p>
+
+                <img className="exame-foto" src='https://i.imgur.com/coBoHDs.png' />
 
                 <fieldset>
 
                     <div className="field">
-                        <label htmlFor="cpf">CPF: </label>
+                        <label htmlFor="gender">CPF: </label>
 
                         <InputMask mask="999.999.999-99"
                             type="text"
                             name="cpf"
                             id="cpf"
-                            value = {CPF}
+                            value={CPF}
                             onChange={e => setCpf(e.target.value)}
                             // onChange={handleInputChange}
                             // required
-                            onBlur = {cpfonBlur}
+                            onBlur={cpfonBlur}
 
                         />
                     </div>
@@ -168,10 +151,9 @@ const CreatePoint = () => {
                             type="text"
                             name="name"
                             id="name"
-                            value = {name}
-
                             onChange={handleInputChange}
                             required
+                            value={name}
                         />
                     </div>
 
@@ -184,7 +166,7 @@ const CreatePoint = () => {
                             id="birthDate"
                             onChange={handleInputChange}
                             required
-                            value = {birthDate}
+                            value={BirthDate}
 
                         />
                     </div>
@@ -200,7 +182,7 @@ const CreatePoint = () => {
                             id="phone1"
                             onChange={handleInputChange}
                             required
-                            value= {Phone1}
+                            value={Phone1}
                         />
                     </div>
 
@@ -213,7 +195,7 @@ const CreatePoint = () => {
                             id="phone2"
                             onChange={handleInputChange}
                             required
-                            value= {Phone2}
+                            value={Phone2}
                         />
                     </div>
 
@@ -226,7 +208,7 @@ const CreatePoint = () => {
                             id="gender"
                             onChange={handleInputChange}
                             required
-                            value= {Gender}
+                            value={Gender}
 
                         />
                     </div>
@@ -240,7 +222,7 @@ const CreatePoint = () => {
                             id="weight"
                             onChange={handleInputChange}
                             required
-                            value= {Weight}
+                            value={Weight}
 
                         />
                     </div>
@@ -256,7 +238,7 @@ const CreatePoint = () => {
                             id="height"
                             onChange={handleInputChange}
                             required
-                            value= {Height}
+                            value={Height}
 
                         />
                     </div>
@@ -268,9 +250,9 @@ const CreatePoint = () => {
                             type="text"
                             name="email"
                             id="email"
-                            value = {email}
                             onChange={handleInputChange}
                             required
+                            value={email}
 
                         />
                     </div>
@@ -288,22 +270,16 @@ const CreatePoint = () => {
                     </div>
 
                     <div className="field">
-
                         <label htmlFor="description">Examination Duration: * </label>
 
-                    <select id="container">
-                        <option value="0 min"></option>
-                        <option value="5 min">5 min</option>
-                        <option value="10 min">10 min</option>
-                    </select>
-
-                    {/* <select>
-                        <option value="laranja">Laranja</option>
-                        <option value="limao">Limão</option>
-                        <option selected value="coco">Coco</option>
-                        <option value="manga">Manga</option>
-                    </select> */}
-                    
+                        <input
+                            type="text"
+                            name="examDuration"
+                            id="examDuration"
+                            onChange={handleInputChange}
+                            width="4800px"
+                            required
+                        />
                     </div>
 
                     <div className="field">
@@ -318,22 +294,10 @@ const CreatePoint = () => {
                         />
                     </div>
 
-                    {/* <div className="field">
-
-                         <textarea 
-                          
-
-                            type="text"
-                            name="examDescription"
-                            id="examDescription"
-                            onChange={handleInputChange}
-                            required />
-
-                    </div> */}
 
                 </fieldset>
 
-                <button type="submit">
+                <button className="button-forward" type="submit">
                     Forward exam
                 </button>
 

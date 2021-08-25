@@ -120,5 +120,25 @@ export const SidebarData: SidebarItem[] = [
         //     }
         // ]
 
+    },
+    {
+        title: 'Exams',
+        path: '/allUsers',
+        // iconClosed: <AiFillCaretDown />,
+
+        icon: <FaCog />,
+        // subnav: [
+        //     {
+        //         title: "Users",
+        //         path: '/overview/users',
+        //         icon: <AiOutlineUser />
+        //     },
+        //     {
+        //         title: "Revenue",
+        //         path: '/overview/revenue',
+        //         icon: <AiOutlineMoneyCollect />
+        //     }
+        // ]
+
     }
 ]

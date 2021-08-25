@@ -20,6 +20,7 @@ class FindExamController{
         return res.status(200).json(nome);
         
     }
+    
     public async show(req:Request, res:Response){
 
        //{relations:['status']}

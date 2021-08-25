@@ -1,4 +1,4 @@
-import { EntityRepository, Repository } from "typeorm";
+import { EntityRepository, Repository, getRepository, Like } from "typeorm";
 import {User} from "../models/User";
 
 
@@ -7,10 +7,8 @@ import {User} from "../models/User";
 class ExamUserRepositorie extends Repository<User>{
 
     public async findByName(name:string):Promise<User | undefined>{
-        const user = await this.findOne({
-            where:{
-                name,
-            },
+        const user = await this.findOne({            
+            where:{name,},
         });
         return user;
     }
@@ -22,14 +20,12 @@ class ExamUserRepositorie extends Repository<User>{
         });
         return user;
     }
-
-    public async findByUserId(userId: string): Promise<User | undefined>{
-        const exams = await this.findOne({
-            where:{
-                userId
-            }
-        })
-        return exams;
+    public async findByIdName(name:string):Promise<User[] | undefined>{
+        const user = await  getRepository(User);
+        
+        return user.find({
+            name: Like(`%${name}%`),
+        });
     }
 }
 

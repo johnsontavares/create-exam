@@ -9,12 +9,12 @@ import { new_user } from "../models/NewUser";
 class UserRepository extends Repository<new_user>{
 
     public async findByCpf(cpf:string):Promise<new_user | undefined>{
-        const doctor = await this.findOne({
+        const user = await this.findOne({
             where:{
                 cpf,
             },
         });
-        return doctor;
+        return user;
     }
     public async findName(name:string):Promise<new_user | undefined>{
         const newUser = await this.findOne({

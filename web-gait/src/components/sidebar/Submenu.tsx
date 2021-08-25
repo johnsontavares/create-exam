@@ -13,11 +13,11 @@ const SidebarLink = styled(Link)`
     justify-content: space-between;
     align-items: right;
     height: 3.75rem;
-    font-size: 1.125rem;
+    font-size: 27px;
     /* margin-left: 2rem; */
     text-decoration: none;
     padding: 1.2rem;
-    color: #afaeae;
+    color: #FFFFFF;
     margin-left: 12px;
     /* margin-top: 1rem; */
 

@@ -1,0 +1,244 @@
+/* -------------------- css ViewProfilePatient/:idUsuario ------------------- */
+
+.pesquisa-profile{
+    background-color:#EEF1F6;
+    border:solid 2px #EEF1F6;
+    border-radius:10px;
+    width:300px;
+    height:32px;
+  position:relative;
+  left: 950px;
+ top:30px;
+}
+
+h1{
+  color: #326ABE;
+  margin-left:300px;
+ margin-top:20px;
+
+}
+
+.seta-voltar{
+  color: #326ABE;
+  border: #326ABE;
+  margin: auto 12px 0px 300px;
+  
+}
+
+.imagem-medico {
+  float: right;
+ width: 300px;
+margin-right: 150px;
+
+}
+
+.notification{
+  position: relative;
+  margin-left: 1300px;
+  top: 60px;
+}
+
+.photo{
+  width: 80px;
+  position: relative;
+  margin-left: 1400px;
+  top: 120px;
+}
+
+
+
+.pesquisa-profile img{
+  float:left;
+  
+}
+
+#txtBuscaprofile{
+  float:left;
+  background-color:transparent;
+  padding-left:5px;
+  padding-right: 66px;;
+  font-size:18px;
+  border:none;
+  
+}
+
+
+label{
+  color: #326ABE;
+}
+
+/* ------------------------- campos de preenchimento ------------------------ */
+
+.principal{
+  font-size: 27px;
+  margin-top: 22px;
+  min-inline-size: auto;
+  border: 0;
+  color: #7272A8;
+  margin-left:300px;
+  display: inline-flex;
+ position: relative;
+}
+
+.field {
+  flex: 1;
+  flex-direction: column;
+  margin-bottom: 24px;
+  margin: 10px;
+  
+}
+
+.field input[type=text]{
+  flex: 1;
+  background: #F0F0F5;
+  border-radius: 8px;
+  border: 0;
+  border-color: #0000;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #000;
+  width: 280px;
+
+
+}
+
+.field input[id=examDescription]{
+  flex: 1;
+  background: #F0F0F5;
+  border-radius: 8px;
+  border: 0;
+  height: 100px;
+  font-size: 16px;
+  color: #6C6C80;
+  padding: 46px;
+  
+}
+
+/* ----------------------------- parte telefone ----------------------------- */
+
+form{
+  font-size: 27px;
+  display: inline-block;
+  margin: 0px 5px 30px auto;
+  width: auto;
+  left: 450px;
+}
+
+label{
+  display: block;
+}
+
+form input[type=text]{
+  flex: 1;
+  background: #F0F0F5;
+  border-radius: 8px;
+  border: 0;
+  border-color: #0000;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #000;
+  width: 280px;
+
+
+}
+
+form input[id=examDescription]{
+  flex: 1;
+  background: #F0F0F5;
+  border-radius: 8px;
+  border: 0;
+  height: 100px;
+  font-size: 16px;
+  color: #6C6C80;
+  padding: 46px;
+  
+}
+
+/* ------------------------------ fim telefone ------------------------------ */
+
+
+/* ---------------------------- inicio descricoes --------------------------- */
+.principal-part-tres div{
+  display: block;
+  font-size: 27px;
+  margin: 15px 310px ;
+  width: 280px;
+  
+  }
+
+
+.principal-part-tres input[type=text]{
+  flex: 1;
+  background: #F0F0F5;
+  border-radius: 8px;
+  border: 0;
+  border-color: #0000;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #000;
+  width: 280px;
+
+
+}
+
+
+.principal-part-tres input[id=examDescription]{
+  flex: 1;
+  background: #F0F0F5;
+  border-radius: 8px;
+  border: 0;
+  height: 100px;
+  font-size: 16px;
+  color: #6C6C80;
+  padding: 46px;
+  width: 400px;
+ 
+  
+}
+
+.principal-part-tres p{
+  text-align: center;
+  width: max-content;
+  
+}
+
+/* ------------------------------ fim descricao ----------------------------- */
+
+button{
+  display: block;
+  width:384px;
+  height: 49px;
+  left:400px;
+  position: relative;
+  background: #6082F6;
+  border-radius: 8px;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 16px;
+  border: 0;
+  align-self: center;
+  margin-top: 40px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+button:hover{
+  background: #A2B5F9;
+}
+
+
+
+  
+
+
+
+
+ 
+
+ 
+  
+
+ 
+
+  

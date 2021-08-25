@@ -1,0 +1,13 @@
+1 - npm init -y
+2 - npm install typescript ts-node nodemon -D
+3 - npx typescript --init
+4 - npm install express 
+5 - npm install @types/express -D
+6 - npm install typeorm pg reflect-metadata
+7 - npx typeorm migration:create -n UsersCreate(cria migrations) 
+8 - após criar a migration executar  comando(npx typeorm migration:run) ou (ts-node ./node_modules/typeorm/cli.js migration:run)
+9 - npm install bcrypt e adiciona os types (npm install @types/bcrypt -D)
+10 - npm install morgan
+11 - npm install jsonwebtoken (npm install @types/jsonwebtoken -D)
+12 - npm install axios --save
+13 - npm install bcrypt

@@ -1,4 +1,5 @@
 import React, {FC, useState} from 'react'
+import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 import { IconContext } from "react-icons";
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
@@ -16,10 +17,10 @@ const Nav = styled.div`
 `;
 
 const SidebarNav = styled.div<{sidebar: boolean}>` // RETIRAR
-  width: 250px;
+  width: 290px;
   height: 100vh;
   top:0;
-  background-color: #dcdcdc;
+  background-color: #A3BEF3;
   position: fixed;
   left: ${ ({sidebar}) => (sidebar ? '0': '-100%')}  ;
 

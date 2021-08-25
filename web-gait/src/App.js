@@ -1,6 +1,5 @@
 import {BrowserRouter,Switch,Route, Redirect} from 'react-router-dom';
 import CreatePoint from './pages/home';
-import EditExam from './pages/EditeExam'
 import Login from '../src/pages/login/index';
 import Register from '../src/pages/register/index';
 import Confirmation from '../src/pages/register/confirmation/confirmation';
@@ -15,18 +14,16 @@ import ConfirmEmail from '../src/pages/register/confirmEmail/index';
 import ValidationEmail from '../src/pages/register/confirmEmail/validationEmail';
 import ExpiredToken from '../src/pages/register/tokenExpired/tokenExpired';
 import ForgotPass from './pages/forgotPassword/forgotPass';
-import PrivateRoute from './authenticated';
-
-
+import AllUsers from './pages/exams/allUsers/allUsers';
+import ViewProfile from './pages/exams/viewProfile/viewProfile';
 
 function App() {
   return (
     <div className="App">
       
        <BrowserRouter>
-            
+             
             <Route path="/home" exact component={CreatePoint}/>
-            <Route path="/editExam/:idExam" exact component={EditExam} />
             <Route path="/" exact component={Login}/>
             <Route path="/register" exact component={Register}/>
             <Route path="/confirmation" exact component={Confirmation}/>
@@ -41,7 +38,8 @@ function App() {
             <Route path="/validationEmail/:idUsuario" exact component={ValidationEmail}/>
             <Route path="/expireToken/:idUsuario" exact component={ExpiredToken}/>
             <Route path="/forgotPass" exact component={ForgotPass}/>
-          
+            <Route path="/allUsers" exact component={AllUsers}/>
+            <Route path="/ViewProfilePatient/:idUsuario" exact component={ViewProfile}/>
         </BrowserRouter>
     </div>
   );
