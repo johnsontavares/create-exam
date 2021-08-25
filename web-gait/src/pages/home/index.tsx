@@ -131,7 +131,7 @@ const CreatePoint = () => {
     }
 
     const idUser = useParams()
-
+    let optimisedHandleChange = handleInputChange
 
 
     return (
@@ -318,6 +318,18 @@ const CreatePoint = () => {
                         />
                     </div>
 
+                    {/* <div className="field">
+
+                         <textarea 
+                          
+
+                            type="text"
+                            name="examDescription"
+                            id="examDescription"
+                            onChange={handleInputChange}
+                            required />
+
+                    </div> */}
 
                 </fieldset>
 

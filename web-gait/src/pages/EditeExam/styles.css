@@ -8,6 +8,16 @@
     margin-bottom: -10px;
 }
 
+textarea{
+  width: 350px;
+  height: 150px;
+
+  background-color: #DFE4EF;
+  border-color: #DFE4EF;
+  border-radius: 10px;
+
+}
+
  p{
   margin-top: -0px;
   color: #326ABE
@@ -55,21 +65,11 @@
     border: 0;
   }
   
- 
-  /* #page-Edit-Exam form legend h2 {
-    font-size: 24px;
-  } */
-  
   #page-Edit-Exam form legend span {
     font-size: 14px;
     font-weight: normal;
     color: var(--text-color);
   }
-  
-  /* #page-Edit-Exam form .field-group {
-    flex: 1;
-    display: flex;
-  } */
   
   #page-Edit-Exam form .field {
     flex: 1;
@@ -130,20 +130,6 @@
     color: #7272A8;
   }
   
-  /* #page-Edit-Exam form .field :disabled {
-    cursor: not-allowed;
-  }
-  
-  #page-Edit-Exam form .field-group .field + .field {
-    margin-left: 24px;
-  }
-  
-  #page-Edit-Exam form .field-group input + input {
-    margin-left: 24px;
-  } */
-  
- 
-  
   #page-Edit-Exam form button {
     width: 234px;
     height: 30px;
@@ -158,31 +144,5 @@
     margin-top: 40px;
     transition: background-color 0.2s;
     cursor: pointer;
-    /* position: center; */
   }
   
-  /* #page-Edit-Exam form button:hover {
-    background: #2FB86E;
-  } */
-  
-  /* .items-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    list-style: none;
-  } */
-  
- 
-  /* .items-grid li span {
-    flex: 1;
-    margin-top: 12px;
-  
-    display: flex;
-    align-items: center;
-    color: var(--title-color)
-  } */
-  
-  /* .items-grid li.selected {
-    background: #FFF;
-    border: 2px solid #dcdcdc;
-  } */

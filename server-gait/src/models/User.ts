@@ -32,4 +32,5 @@ export class User {
 
     @Column()
     examDescription: string;
+    statusCode: any;
 }

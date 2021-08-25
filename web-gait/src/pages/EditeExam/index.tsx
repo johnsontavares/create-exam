@@ -92,7 +92,7 @@ try{
                 <fieldset>
 
                     <div className="field">
-                        <label htmlFor="description">Examination Date: </label>
+                        <label htmlFor="description">Examination Date: * </label>
 
                         <InputMask mask="99/99/9999"
                             type="text"
@@ -120,17 +120,17 @@ try{
                     </div>
 
                     <div className="field">
-                        <label htmlFor="description">Medical exam description: </label>
+                        <label htmlFor="description">Medical exam description: * </label>
 
-                        <input
+                        <textarea
                             onChange = {e => setDescription(e.target.value)}
                             value={Description}
-
-                            type="text"
+                            
                             name="examDescription"
                             id="examDescription"
-                            required
-                        />
+                            required />
+
+
                     </div>
 
 

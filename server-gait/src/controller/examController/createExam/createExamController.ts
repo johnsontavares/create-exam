@@ -96,6 +96,31 @@ class Create_Exam_Controller{
     public async updateExam(request: Request, response:Response){
         const {examDate, examDuration, examDescription} = request.body
 
+        var regexDate = new RegExp("^([0-9]{2})(\/)([0-9]{2})(\/)([0-9]{4})$")
+
+        if(examDescription.length > 320){
+            console.log("passou do limite! ")
+            return response.status(404).json({message: "Invalid description"})
+
+        }
+
+           // 28/08/2020
+        if(!regexDate.test(examDate)){
+            return response.status(404).json({message: "Invalid date format"})
+        }
+        // else{
+        //     return response.status(200).json({message: "Valid date format"})
+        // }
+
+        if(!regexDate.test(examDate)){
+            return response.status(404).json({message: "Invalid date format"})
+
+        }
+        if(examDuration != "5 min" && examDuration != "10 min" ){
+            return response.status(404).json({message: "Invalid duration format"})
+
+        }
+
         try{
 
         const exam = await getRepository(User).findOne(request.params.id)
@@ -113,12 +138,13 @@ class Create_Exam_Controller{
             return response.status(200).json({message: "Exam edited successfully"})
 
         }else{
+      return response.status(404).json({message: "Exam not found"})
+
             return response.status(404).json({message: "Exam not found"})
           }
      } catch (error) {
         return response.status(404).json({error})
       }
-      return response.status(404).json({message: "Exam not found"})
 
         // await examRepository.update(exam.id, exam)
     }
